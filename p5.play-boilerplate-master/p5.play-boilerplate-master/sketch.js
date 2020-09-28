@@ -29,52 +29,52 @@ function setup() {
   var options ={
     restitution:1
   }
-  ball = Bodies.circle(200,200,20,options);
+  ball = Bodies.circle(200,400,20,options);
   World.add(world,ball);
 
-	constraint = new Constraint(this.ball,{x:200,y:200});
+	constraint = new Constraint(this.ball,{x:200,y:400});
 
   //first layer
-	box1 = new Box(700,500,40,50);
-	box2 = new Box(730,500,40,50);
-	box3 = new Box(760,500,40,50);
-	box4 = new Box(790,500,40,50);
-	box5 = new Box(820,500,40,50);
-	box6 = new Box(850,500,40,50);
+	box1 = new Box(700,550,40,50);
+	box2 = new Box(730,550,40,50);
+	box3 = new Box(760,550,40,50);
+	box4 = new Box(790,550,40,50);
+	box5 = new Box(820,550,40,50);
+	box6 = new Box(850,550,40,50);
 
   //second layer
-	box7 = new Box(730,300,40,50);
-	box8 = new Box(760,300,40,50);
-	box9 = new Box(790,300,40,50);
-	box10 = new Box(820,300,40,50);
+	box7 = new Box(730,500,40,50);
+	box8 = new Box(760,500,40,50);
+	box9 = new Box(790,500,40,50);
+	box10 = new Box(820,500,40,50);
 
   //third layer
-	box11 = new Box(750,100,40,50);
-	box12 = new Box(800,100,40,50);
+	box11 = new Box(750,450,40,50);
+	box12 = new Box(800,450,40,50);
 
   //fourth layer
-	box13 = new Box(775,0,40,50);
+	box13 = new Box(775,400,40,50);
 
   //first layer
-	box14 = new Box(1100,0,40,50);
-	box15 = new Box(1130,0,40,50);
-	box16 = new Box(1160,0,40,50);
-	box17 = new Box(1190,0,40,50);
-	box18 = new Box(1220,0,40,50);
-	box19 = new Box(1250,0,40,50);
+	box14 = new Box(1100,250,40,50);
+	box15 = new Box(1130,250,40,50);
+	box16 = new Box(1160,250,40,50);
+	box17 = new Box(1190,250,40,50);
+	box18 = new Box(1220,250,40,50);
+	box19 = new Box(1250,250,40,50);
 
   //second layer
-	box20 = new Box(1130,-100,40,50);
-	box21 = new Box(1160,-100,40,50);
-	box22 = new Box(1190,-100,40,50);
-	box23 = new Box(1220,-100,40,50);
+	box20 = new Box(1130,200,40,50);
+	box21 = new Box(1160,200,40,50);
+	box22 = new Box(1190,200,40,50);
+	box23 = new Box(1220,200,40,50);
 
   //third layer
-	box24 = new Box(1200,-200,40,50);
-	box25 = new Box(1150,-200,40,50);
+	box24 = new Box(1200,150,40,50);
+	box25 = new Box(1150,150,40,50);
 
   //fourth layer
-	box26 = new Box(1175,-300,40,50);
+	box26 = new Box(1175,100,40,50);
 
 	Engine.run(engine);
   
@@ -159,7 +159,7 @@ function mouseReleased(){
 }
 function keyPressed(){
 	if(keyCode === 32){
-	   Matter.Body.setPosition(this.ball,{x:200,y:200});
+	   Matter.Body.setPosition(this.ball,{x:200,y:400});
 	   constraint.attach(this.ball);
 	}
 }

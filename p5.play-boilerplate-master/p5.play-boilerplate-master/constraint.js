@@ -3,7 +3,7 @@ class Constraint{
         var options = {
             bodyA: bodyA,
             pointB: pointB,
-            stiffness: 0.007,
+            stiffness: 0.01,
             length: 5
         }
         this.pointB = pointB;
@@ -21,8 +21,8 @@ class Constraint{
         if(this.constraint.bodyA){
         var pointA = this.constraint.bodyA.position;
         var pointB = this.pointB;
-        strokeWeight(3);
-        stroke("blue")
+        strokeWeight(7);
+        stroke("red");
         line(pointA.x, pointA.y, pointB.x, pointB.y);
     }
 }
